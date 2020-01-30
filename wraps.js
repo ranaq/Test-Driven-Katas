@@ -8,10 +8,22 @@ const wrap=(line,maxLen)=>{
   let lineArray=line.split('')
   // check whether is a space. if space, line break
   // if not - set var = maxLen and make it smaller until we get to a space
-  let idxToSplice=maxLen
-  if (testChar===' '){
-    lineArray.splice(idxToSplice,1,'\n')
+  let i=maxLen;
+  if (line.length < maxLen) return line;
+  
+  while(lineArray[i] !== ' ') {
+    i--;
   }
+  lineArray.splice(i,1,'\n');
+
+  /* if (testChar===' '){
+    lineArray.splice(i,1,'\n')
+  }
+  else {
+   
+    }
+    lineArray.splice(i,1,'\n')
+  }*/
 
   return lineArray.join('')
 }

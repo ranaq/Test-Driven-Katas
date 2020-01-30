@@ -20,3 +20,9 @@ describe('adding columns',()=>{
   })
 })
 
+describe('adding columns',()=>{
+  it ('Col length does not land on a space',()=>{
+    expect (wrap("A short string",10)).to.equal("A short\nstring")
+  })
+})
+
