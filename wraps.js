@@ -16,15 +16,6 @@ const wrap=(line,maxLen)=>{
   }
   lineArray.splice(i,1,'\n');
 
-  /* if (testChar===' '){
-    lineArray.splice(i,1,'\n')
-  }
-  else {
-   
-    }
-    lineArray.splice(i,1,'\n')
-  }*/
-
   return lineArray.join('')
 }
 
